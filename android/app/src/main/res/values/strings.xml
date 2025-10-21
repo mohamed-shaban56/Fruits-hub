@@ -1,0 +1,7 @@
+<resources>
+<string name="app_name">Fruits Hub</string>
+    <!-- Facebook SDK config -->
+    <string name="facebook_app_id">1226676069196271</string>
+    <string name="fb_login_protocol_scheme">fb1226676069196271</string>
+    <string name="facebook_client_token">b3183f17ee48b347fd1d0d0077ca126e</string>
+</resources>
