@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruitapp/core/function_hulper/build_error_bar.dart';
-import 'package:fruitapp/features/auth/persetation/manger/auth_bloc.dart';
-import 'package:fruitapp/features/auth/persetation/manger/auth_state.dart';
+import 'package:fruitapp/core/utliz/function_hulper/user_massage.dart';
+import 'package:fruitapp/features/auth/persetation/manger/signUpCubit/sing_up_cubit.dart';
 import 'package:fruitapp/features/auth/persetation/widgets/sign_up_body.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+
+
 
 class SingUpBodyBlocConsumer extends StatelessWidget {
   const SingUpBodyBlocConsumer({
@@ -14,20 +14,20 @@ class SingUpBodyBlocConsumer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AuthBloc, AuthState>(
+    return BlocConsumer<SingUpCubit, SingUpState>(
       listener: (context, state) {
-       if(state is AuthStateFailuer)
+       if(state is SingUpFailure)
        {
-buidErrorBar(context: context, errorMessege: state.error);
+        userMessege(context: context, errorMessege: state.error);
        }
-       else if(state is AuthStateSuccess)
+       else if(state is SingUpSuccess)
        {
-        buidErrorBar(context: context, errorMessege: 'success');
+       
+        Navigator.pop(context);
        }
       },
       builder: (context, state) {
-        return ModalProgressHUD(inAsyncCall: state is AuthStateLoadig?true:false,
-        child: SignUpBody());
+        return  SignUpBody();
       },
     );
   }

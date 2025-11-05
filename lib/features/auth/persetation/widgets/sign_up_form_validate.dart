@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruitapp/core/function_hulper/build_error_bar.dart';
+import 'package:fruitapp/core/utliz/function_hulper/user_massage.dart';
 import 'package:fruitapp/core/utliz/custom_text_fild.dart';
-import 'package:fruitapp/core/widgets/custom_button.dart';
-import 'package:fruitapp/features/auth/persetation/manger/auth_bloc.dart';
-import 'package:fruitapp/features/auth/persetation/manger/auth_event.dart';
+import 'package:fruitapp/core/utliz/widgets/custom_button.dart';
+import 'package:fruitapp/features/auth/persetation/manger/signUpCubit/sing_up_cubit.dart';
 import 'package:fruitapp/features/auth/persetation/widgets/custom_checkBox.dart';
-import 'package:fruitapp/features/auth/persetation/widgets/have_an_account.dart';
+import 'package:fruitapp/features/auth/persetation/widgets/have_an_account%20.dart';
 import 'package:fruitapp/generated/l10n.dart';
 
 class SignUpFormValidate extends StatefulWidget {
@@ -32,7 +31,7 @@ class _SignUpFormValidateState extends State<SignUpFormValidate> {
               SizedBox(height: 16,),
                 CustomTextFild( controller: widget.emailController,    hintText: S.of(context).email, icon: Icons.email, textInputType: TextInputType.emailAddress),
                  SizedBox(height: 16,),
-                  CustomTextFild(controller: widget.passwordController, hintText:  S.of(context).password, icon: Icons.visibility, textInputType: TextInputType.text,ispassword: true,),
+                  CustomTextFild(controller: widget.passwordController, hintText:  S.of(context).password, icon: Icons.visibility, textInputType: TextInputType.text,ispassword: true,maxLines: 1,),
                   SizedBox(height: 12,),
                   
                   CustomCheckbox(isChecked:isChecked , onchange: (bool value) { 
@@ -51,10 +50,10 @@ class _SignUpFormValidateState extends State<SignUpFormValidate> {
                                    {
                                   if(isChecked)
                                   {
-                                    context.read<AuthBloc>().add(SignUpEvet(email:widget. emailController.text, password: widget.passwordController.text));
+                                    context.read<SingUpCubit>().createUserWithEmailAndPassword(name: widget.nameController.text, password: widget.passwordController.text, email: widget.emailController.text);
 
                                   }else{
-                                    buidErrorBar(context: context, errorMessege: S.current.termsRequired);
+                                    userMessege(context: context, errorMessege: S.current.termsRequired);
                                   }
                                     
                                 }
