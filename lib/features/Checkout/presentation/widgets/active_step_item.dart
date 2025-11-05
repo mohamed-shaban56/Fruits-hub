@@ -8,9 +8,9 @@ import 'package:fruitapp/core/utliz/app_style.dart';
 
 class ActiveStepItem extends StatelessWidget {
   const ActiveStepItem({
-    super.key,
+    super.key, required this.stepName,
   });
-
+final String stepName;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,7 +22,7 @@ class ActiveStepItem extends StatelessWidget {
        child: SvgPicture.asset(Assets.assetsImagesCheckedIcon),
      ),
      SizedBox(width: 4.w,),
-     Text('data',style: AppStyle.bold13().copyWith(color: AppColor.primaryColor),),
+     Text(stepName,style: AppStyle.bold13().copyWith(color: AppColor.primaryColor),),
      ],
     );
   }
