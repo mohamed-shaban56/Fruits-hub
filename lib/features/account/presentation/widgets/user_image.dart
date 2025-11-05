@@ -1,7 +1,9 @@
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:fruitapp/core/utliz/app_image_assets.dart';
+import 'package:fruitapp/core/utliz/services/shared_prefrence_singlton.dart';
 import 'package:image_picker/image_picker.dart';
 
 
@@ -15,7 +17,19 @@ class UserImage extends StatefulWidget {
 
 class _UserImageState extends State<UserImage> {
      final ImagePicker picker = ImagePicker();
+
   File? imageFile;
+ File ?getProfileImage;
+
+  @override
+  void initState() {
+
+    super.initState();
+   
+         getProfileImage=SharedPrefrenceSinglton.getImage();
+ 
+
+  }
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -24,8 +38,7 @@ class _UserImageState extends State<UserImage> {
 
             CircleAvatar(
               radius: 45,
-              backgroundColor: Colors.amber,
-              backgroundImage:imageFile !=null? FileImage(imageFile!):AssetImage(Assets.assetsImagesUserImage),
+              backgroundImage:    getProfileImage!=null?  FileImage(getProfileImage!)     :AssetImage(Assets.accountViewUserImage)as ImageProvider ,
             ),
 
             Positioned(
@@ -37,9 +50,20 @@ class _UserImageState extends State<UserImage> {
 
              final XFile? image = await picker.pickImage(source: ImageSource.gallery);
                setState(() {
-                    imageFile=File(image!.path);
+                if(image!=null)
+                {
+                 getProfileImage= imageFile=File(image.path);
+                 
+                }else{
+                  imageFile=null;
+                }
+                   
                     });
-
+                    if(image!=null)
+                    {
+      await SharedPrefrenceSinglton.setImage(imageFile!.path);
+                    }
+      
                 },
                 child: Image.asset(Assets.cameraImage))
             )
