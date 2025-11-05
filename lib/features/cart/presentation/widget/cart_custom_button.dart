@@ -17,7 +17,7 @@ class CartCustomButton extends StatelessWidget {
         final hasItems = cartCubit.cartEntity.cartItems.isNotEmpty;
     return BlocBuilder<CartCubitTotalPrice, CartCubitTotalPriceState>(
       builder: (context, state) {
-       if(state is tempstate)
+       if(state is CalclateTotalPriceState)
        {
 
 return CustomButtomBlocBuilder(hasItems: hasItems, cartCubit: cartCubit, totalPrice: state.totalPrice);
