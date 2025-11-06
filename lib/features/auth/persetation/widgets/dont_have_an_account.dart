@@ -1,8 +1,8 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:fruitapp/core/app_color.dart';
-import 'package:fruitapp/core/app_style.dart';
+import 'package:fruitapp/core/utliz/app_color.dart';
+import 'package:fruitapp/core/utliz/app_style.dart';
 import 'package:fruitapp/generated/l10n.dart';
 
 class DontHaveAnAcountText extends StatelessWidget {
