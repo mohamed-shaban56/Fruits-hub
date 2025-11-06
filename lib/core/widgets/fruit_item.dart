@@ -22,7 +22,7 @@ class FruitItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>FruitItemDetailsView()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>FruitItemDetailsView(imageUrl: product.imageUrl,)));
       },
       child: Container(
         decoration: BoxDecoration(
