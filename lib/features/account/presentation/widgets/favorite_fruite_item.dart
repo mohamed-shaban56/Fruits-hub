@@ -4,11 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fruitapp/core/utliz/app_color.dart';
 import 'package:fruitapp/core/utliz/app_style.dart';
-import 'package:fruitapp/core/utliz/cubit/cart_cubit/cart_cubit.dart';
+import 'package:fruitapp/core/utliz/cubit/cart/cart_cubit/cart_cubit.dart';
 import 'package:fruitapp/core/utliz/function_hulper/is_arabic.dart';
 import 'package:fruitapp/core/utliz/function_hulper/user_massage.dart';
 import 'package:fruitapp/core/utliz/widgets/add_remove_button.dart';
-import 'package:fruitapp/core/utliz/widgets/custom_network_image.dart';
+import 'package:fruitapp/core/widgets/custom_caced_network_image.dart';
 import 'package:fruitapp/features/dashbord/domain/entites/product_entity.dart';
 import 'package:fruitapp/generated/l10n.dart';
 class FavoriteFruiteItem extends StatelessWidget {
@@ -59,6 +59,7 @@ final ProductEntity productItem;
               trailing: AddRemoveButton(
                 onTap: () {
                   context.read<CartCubit>().addProduct(productItem);
+                  
                   userMessege(context: context, errorMessege: S.current.productAddedToCart);
                 },
                 

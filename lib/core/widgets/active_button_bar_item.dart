@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fruitapp/core/app_style.dart';
-import 'package:fruitapp/core/function_hulper/is_arabic.dart';
+import 'package:fruitapp/core/utliz/app_style.dart';
+import 'package:fruitapp/core/utliz/function_hulper/is_arabic.dart';
 import 'package:fruitapp/features/home/data/domain/button_navigation_bar_item.dart';
 
 class ActiveNavigationBarItem extends StatefulWidget {

@@ -43,3 +43,5 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+lib/core/utliz/services/seurity_storage_service.dart
+lib/core/utliz/function_hulper/api_keys.dart

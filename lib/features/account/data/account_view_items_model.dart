@@ -5,6 +5,7 @@ import 'package:fruitapp/core/utliz/app_image_assets.dart';
 import 'package:fruitapp/generated/l10n.dart';
 
 
+
 class AccountViewItemsModel {
 
   final String image;
@@ -13,12 +14,12 @@ class AccountViewItemsModel {
 
   AccountViewItemsModel({required this.image, required this.title, required this.icon});
 }
-List<AccountViewItemsModel>accountItemsList=[
-  AccountViewItemsModel(image: Assets.accountViewUserImage, title:  S.current.account, icon:  Icons.arrow_forward_ios,),
-AccountViewItemsModel(image: Assets.requstImage, title: S.current.orders, icon:  Icons.arrow_forward_ios,),
-  AccountViewItemsModel(image: Assets.heartimage, title: S.current.favorites, icon:  Icons.arrow_forward_ios),
- AccountViewItemsModel(image: Assets.notificationImage, title: S.current.notifications, icon:  FontAwesomeIcons.toggleOff),
- AccountViewItemsModel(image: Assets.languageImage, title: S.current.language, icon: Icons.arrow_forward_ios,),
-  AccountViewItemsModel(image: Assets.infoCircleImage, title: S.current.about_us, icon: Icons.arrow_forward_ios,)
-         
+
+List<AccountViewItemsModel>getaccountItemsList({required BuildContext context})=>[
+AccountViewItemsModel(image: Assets.accountViewUserImage, title:S.of(context).account, icon:  Icons.arrow_forward_ios,),
+AccountViewItemsModel(image: Assets.requstImage, title: S.of(context).orders, icon:  Icons.arrow_forward_ios,),
+  AccountViewItemsModel(image: Assets.heartimage, title: S.of(context).favorites, icon:  Icons.arrow_forward_ios),
+ AccountViewItemsModel(image: Assets.notificationImage, title: S.of(context).notifications, icon:  FontAwesomeIcons.toggleOff),
+ AccountViewItemsModel(image: Assets.languageImage, title: S.of(context).language, icon: Icons.arrow_forward_ios,),
+  AccountViewItemsModel(image: Assets.infoCircleImage, title: S.of(context).about_us, icon: Icons.arrow_forward_ios,)
 ];
