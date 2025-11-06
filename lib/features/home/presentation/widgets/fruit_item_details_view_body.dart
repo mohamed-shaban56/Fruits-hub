@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruitapp/core/utliz/app_color.dart';
-import 'package:fruitapp/core/widgets/custom_caced_network_image.dart';
-import 'package:fruitapp/features/home/presentation/widgets/custom_curve.dart';
+import 'package:fruitapp/core/utliz/function_hulper/is_arabic.dart';
+import 'package:fruitapp/features/home/presentation/widgets/fruit_item_details_back_button.dart';
+import 'package:fruitapp/features/home/presentation/widgets/fruit_item_details_image.dart';
 
 
 class FruitItemDetailsViewBody extends StatelessWidget {
@@ -9,25 +9,23 @@ class FruitItemDetailsViewBody extends StatelessWidget {
 final String imageUrl;
   @override
   Widget build(BuildContext context) {
+    var isA=isArabic(context);
     double height=MediaQuery.sizeOf(context).height;
     return Column(
       children: [
-        ClipPath(
-          clipper:CustomCurve() ,
-          child: Container(
-            height: height/2.3,
-            width: double.infinity,
-            color: AppColor.gryColor,
-           child: Center(
-             child: SizedBox(
-              height: 167,
-              width: 221,
-              child: CustomCachedNetworkImage(imageUrl: imageUrl)),
-           ),
-          ),
+        Stack(
+          children: [
+            FruitItemDetailsImage(height: height, imageUrl: imageUrl),
+            Positioned(
+              top: 25,
+              left:isA?null :20,
+              right: isA?20:null,
+              child: FruitItemDetailsBackButton()
+                  ),
+            
+          ],
         ),
       ],
     );
   }
 }
-

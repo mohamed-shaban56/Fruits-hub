@@ -37,7 +37,7 @@ class Assets {
   /// Assets for assetsImagesFruitBasket
   /// assets/images/fruit-basket.svg
   static const String assetsImagesFruitBasket = "assets/images/fruit-basket.svg";
-
+  static const String assetImageBackIos = "assets/images/arrow_back_ios.png";
   /// Assets for assetsImagesGithub
   /// assets/images/github.svg
   static const String assetsImagesGithub = "assets/images/github.svg";
