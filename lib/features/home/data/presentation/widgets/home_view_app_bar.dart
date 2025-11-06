@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruitapp/features/home/data/presentation/widgets/custom_notification_icon.dart';
-import 'package:fruitapp/features/home/data/presentation/widgets/user_info.dart';
+import 'package:fruitapp/features/home/presentation/widgets/custom_notification_icon.dart';
+import 'package:fruitapp/features/home/presentation/widgets/user_info.dart';
 
 AppBar homeViewAppBar(bool isA) {
     return AppBar(

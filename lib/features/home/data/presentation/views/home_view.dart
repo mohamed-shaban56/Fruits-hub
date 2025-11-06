@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:fruitapp/core/function_hulper/is_arabic.dart';
+import 'package:fruitapp/core/utliz/function_hulper/is_arabic.dart';
 import 'package:fruitapp/core/widgets/custom_navigation_bar.dart';
 import 'package:fruitapp/features/home/data/presentation/widgets/home_view_app_bar.dart';
-import 'package:fruitapp/features/home/data/presentation/widgets/home_view_body.dart';
+import 'package:fruitapp/features/home/presentation/widgets/home_view_body.dart';
 
 
 
@@ -25,7 +25,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       bottomNavigationBar:CustomNavigationBar() ,
       appBar: homeViewAppBar(isA),
-      body: HomeViewBody()
+      body: HomeViewBody(isA: isA,)
       
     );
   }
