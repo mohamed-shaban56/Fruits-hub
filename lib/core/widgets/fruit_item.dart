@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruitapp/core/utliz/app_color.dart';
 import 'package:fruitapp/core/utliz/function_hulper/is_arabic.dart';
 import 'package:fruitapp/core/widgets/custom_caced_network_image.dart';
 import 'package:fruitapp/core/widgets/fruit_item_favorite_icon_favorite_buttom.dart';
@@ -19,7 +20,7 @@ class FruitItem extends StatelessWidget {
     var isA = isArabic(context);
     return Container(
       decoration: BoxDecoration(
-          color: Color(0xffF3F5F7), borderRadius: BorderRadius.circular(4)),
+          color: AppColor.fruitBackGround(context), borderRadius: BorderRadius.circular(4)),
       child: Padding(
         padding: EdgeInsets.only(
             left: isA ? 8.5 : 7.5, right: isA ? 7.5 : 8.5, bottom: 16, top: 17),

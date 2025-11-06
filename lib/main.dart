@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruitapp/core/Them/them.dart';
 import 'package:fruitapp/core/utliz/constant.dart';
 import 'package:fruitapp/core/utliz/cubit/lang_cubit/cubit/language_cubit.dart';
 import 'package:fruitapp/core/utliz/function_hulper/service_locator.dart';
@@ -65,8 +66,8 @@ class FruitsHub extends StatelessWidget {
               return BlocBuilder<LanguageCubit, Locale>(
                       builder: (context, local) {
                         return MaterialApp(
-                          theme: ThemeData.light(),
-                          darkTheme: ThemeData.dark(),
+                          theme: AppThem.light,
+                          darkTheme: AppThem.dart,
                           themeMode: themMode,
                           locale: local,
                           debugShowCheckedModeBanner: false,

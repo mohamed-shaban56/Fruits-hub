@@ -24,10 +24,11 @@ final bool isSelected;
 
       SizedBox(width: 10,),
       Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
       Text(title,style: AppStyle.semiBold13(),),
       SizedBox(height: 6.h,),
-      Text(subTitle,style: AppStyle.regular13().copyWith(color: Colors.black.withOpacity(.5)),) ,
+      Text(subTitle,style: AppStyle.regular13().copyWith(color: Color(0xff3A8B33)),) ,
         ],
       )
       ,

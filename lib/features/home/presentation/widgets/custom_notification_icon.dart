@@ -12,7 +12,7 @@ class CustomNotificationIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColor.notificationColor,
+        color: AppColor.notificationBackgroundColor(context),
        borderRadius: BorderRadius.circular(30)
       ),
       child: Padding(

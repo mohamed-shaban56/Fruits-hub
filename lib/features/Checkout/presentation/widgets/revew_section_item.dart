@@ -23,7 +23,7 @@ final Widget? child;
           height: 128.h,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: AppColor.gryColor,
+            color: AppColor.reviewItemSectionBackgroun(context),
             borderRadius: BorderRadius.circular(4)
           ),
           child: child,

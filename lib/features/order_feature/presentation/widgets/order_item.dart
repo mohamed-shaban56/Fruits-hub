@@ -25,7 +25,7 @@ final OrderEntity order;
       elevation: 1,
       child: Container(
         decoration: BoxDecoration(
-          color: AppColor.gryColor,
+          color: AppColor.orderViewItemBackground(context),
           borderRadius: BorderRadius.circular(20)
         ),
         child: Padding(

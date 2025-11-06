@@ -5,7 +5,7 @@ import 'package:fruitapp/core/utliz/cubit/cart/cart_cubit/cart_cubit.dart';
 import 'package:fruitapp/features/cart/presentation/widget/cart_custom_button.dart';
 import 'package:fruitapp/features/cart/presentation/widget/cart_header_widget.dart';
 import 'package:fruitapp/features/cart/presentation/widget/cart_item_sliver_list_bloc_builder.dart';
-import 'package:fruitapp/features/cart/presentation/widget/custom_divider.dart';
+
 
 class CartViewBody extends StatefulWidget {
   const CartViewBody({super.key});
@@ -35,9 +35,9 @@ class _CartViewBodyState extends State<CartViewBody> {
               ),
             ),
 
-            SliverToBoxAdapter(child: CustomDivider()),
+       SliverToBoxAdapter(child: SizedBox(height: 24.h)),
             CartItemSliverlistBlocBuilder(),
-            SliverToBoxAdapter(child: CustomDivider()),
+         
           ],
         ),
 

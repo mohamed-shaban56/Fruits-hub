@@ -12,7 +12,7 @@ final String orderStatus;
     return Container(
      
       decoration: BoxDecoration(
-        color: Colors.amber,
+        color: Colors.orange,
         borderRadius: BorderRadius.circular(6)
       ),
       child: Padding(

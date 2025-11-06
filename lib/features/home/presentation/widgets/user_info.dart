@@ -40,7 +40,7 @@ late  UserEntity user;
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(S.current.good_morning,style: AppStyle.regular16(),),
-              Text(user.name,style: AppStyle.regular16(),),
+              Text(user.name,style: AppStyle.regular16().copyWith(color: Theme.of(context).brightness==Brightness.light?Colors.black:Colors.white),),
             ],
           )
         ],

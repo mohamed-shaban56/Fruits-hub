@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruitapp/core/utliz/app_color.dart';
 import 'package:fruitapp/core/utliz/app_style.dart';
 import 'package:fruitapp/features/Checkout/domain/entityes/order_input_entity.dart';
 import 'package:fruitapp/features/Checkout/presentation/widgets/get_review_price.dart';
@@ -15,7 +16,7 @@ Column(
   crossAxisAlignment: CrossAxisAlignment.start,
           children: [
  Text('${getReviewPrice(orderEntity)} ${S.current.price} ',style: AppStyle.semiBold16()),
- Text('40 جنيه',style: AppStyle.regular13().copyWith(color: Colors.black.withOpacity(.5)),),
+ Text('40 جنيه',style: AppStyle.regular13().copyWith(color: AppColor.reviewItemTextColor(context)),),
           ],
         );
   }

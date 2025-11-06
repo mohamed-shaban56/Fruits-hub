@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruitapp/core/utliz/app_color.dart';
 import 'package:fruitapp/core/utliz/app_style.dart';
 import 'package:fruitapp/generated/l10n.dart';
 
@@ -16,16 +17,19 @@ class CartHeaderWidget extends StatelessWidget {
     return Container(
       height: 41.h,
       width: double.infinity,
-     color: Color(0xffEBF9F1),
+     color:AppColor.cartHeaderBackground(context) ,
      child: Center(
-      child:Text.rich(TextSpan(children: [
+      child:Text.rich(
+        
+        TextSpan(children: [
         TextSpan(
-          text:  S.current.shopping_cart_summary,style: AppStyle.regular13().copyWith(color: Color(0xff1B5E37)),),
+          text:  S.current.shopping_cart_summary,style: AppStyle.regular13().copyWith(color:AppColor.cartHeaderTextColor(context))),
         TextSpan(
           text: lenght.toString()
         ),
+        
         TextSpan(
-          text:  S.current.shoppping_cart_summary2,style: AppStyle.regular13().copyWith(color: Color(0xff1B5E37)),
+          text:  S.current.shoppping_cart_summary2,style: AppStyle.regular13().copyWith(color: AppColor.cartHeaderTextColor(context)),
         )
       ]))
      ),

@@ -18,7 +18,7 @@ class AboutUsViewBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColor.aboutUsBacGroundColor(context),
             borderRadius: BorderRadius.circular(4)
           ),
           child: Padding(

@@ -18,24 +18,27 @@ class ReviewSectionItemImeplement extends StatelessWidget {
   Widget build(BuildContext context) {
     var orderEntity=context.read<OrderInputEntity>();
 
-    return Column(
-    children: [
-      SizedBox(
-        height: 15.h,),
-
-        Row(
-          children: [
- SubTotalAndDeliveryText(),
-        Spacer(),
-
-SubTotalAndDelevryPrice(orderEntity: orderEntity,)
-          ],
-        ),
-       
-      CustomReviewDivider(),
-       TotalReviewPrice(orderEntity: orderEntity),
-    ],
-            );
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      child: Column(
+      children: [
+        SizedBox(
+          height: 15.h,),
+      
+          Row(
+            children: [
+       SubTotalAndDeliveryText(),
+          Spacer(),
+      
+      SubTotalAndDelevryPrice(orderEntity: orderEntity,)
+            ],
+          ),
+         
+        CustomReviewDivider(),
+         TotalReviewPrice(orderEntity: orderEntity),
+      ],
+              ),
+    );
   }
 
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruitapp/core/utliz/app_color.dart';
 import 'package:fruitapp/core/utliz/app_style.dart';
 import 'package:fruitapp/core/utliz/function_hulper/is_arabic.dart';
 import 'package:fruitapp/generated/l10n.dart';
@@ -40,7 +41,7 @@ controller:widget.controller ,
       ),
       decoration: InputDecoration(
        filled: true,
-       fillColor:  Color(0xffF9FAFA),
+       fillColor:  AppColor.textFildBackgroundColor(context),
         border: buildOutLineInputBorder(),
         enabledBorder: buildOutLineInputBorder(),
         focusedBorder: buildOutLineInputBorder(),
@@ -53,9 +54,9 @@ controller:widget.controller ,
           setState(() {
             obSecretText=!obSecretText;
           });
-        }, icon: Icon(obSecretText? Icons.visibility_off :Icons.visibility ,color: Color(0xff949D9E),))
+        }, icon: Icon(obSecretText? Icons.visibility_off :Icons.visibility ,color:AppColor.textFilIconColor(context),))
         
-        :Icon(widget.icon,color:Color(0xff949D9E) ,)
+        :Icon(widget.icon,color:AppColor.textFilIconColor(context) ,)
         
         
       ),
@@ -64,7 +65,7 @@ controller:widget.controller ,
 
   OutlineInputBorder buildOutLineInputBorder() {
     return OutlineInputBorder(
-          borderSide: BorderSide(width: 1,color:  Color(0xffC9CECF)),
+          borderSide: BorderSide(width: 1,color: AppColor.textFildBackgroundColor(context)),
           borderRadius: BorderRadius.circular(4),
           
         );

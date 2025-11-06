@@ -28,12 +28,12 @@ class ImplementLogOutWidget extends StatelessWidget {
           child: Container(
             height: 42.h,
             width: double.infinity,
-            color: AppColor.backgroundLightGreen,
+            color: AppColor.signOutUserBackgroind(context),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                  Spacer(),
-                Text(S.current.logout,style: AppStyle.semiBold13().copyWith(color: AppColor.primaryColor),),
+                Text(S.current.logout,style: AppStyle.semiBold13().copyWith(color:AppColor.signOutUserTextColor(context)),),
              Spacer(),
                 SvgPicture.asset(Assets.existImage),
                 SizedBox(width: 40.w,)

@@ -9,15 +9,11 @@ import 'package:fruitapp/features/order_feature/domain/get_order_repo.dart';
 part 'get_order_state.dart';
 
 class GetOrderCubit extends Cubit<GetOrderState> {
-  GetOrderCubit(this.getOrderRepo) : super(OrderInitial());
-
-  GetOrderRepo getOrderRepo;
+    GetOrderRepo getOrderRepo;
 
   StreamSubscription? _streamSubscription;
-  void getOrder() {
-    emit(OrderLoadig());
-
-    _streamSubscription = getOrderRepo.getOrder().listen((result) {
+  GetOrderCubit(this.getOrderRepo) : super(OrderLoadig()){
+_streamSubscription = getOrderRepo.getOrder().listen((result) {
       result.fold((failure) {
         emit(OrderFailure(failure.error));
         log('faild in step2 in getOrderCubit');

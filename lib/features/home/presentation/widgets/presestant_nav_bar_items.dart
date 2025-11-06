@@ -10,7 +10,7 @@ List<PersistentBottomNavBarItem> navBarsItems() {
     return [
 PersistentBottomNavBarItem(
 
-        icon: const SizedBoxImage(image: Assets.assetsImagesHome,),
+        icon: const SizedBoxImage(image: Assets.assetsImagesOutlinehome,),
         title: (S.current.home),
         textStyle: AppStyle.semiBold11(),
         activeColorPrimary: Colors.green,

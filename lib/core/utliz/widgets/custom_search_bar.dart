@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:fruitapp/core/utliz/app_color.dart';
 import 'package:fruitapp/core/utliz/app_image_assets.dart';
 import 'package:fruitapp/features/home/presentation/widgets/outLine_input_border.dart';
 import 'package:fruitapp/features/home/presentation/widgets/sized_image.dart';
@@ -14,6 +15,7 @@ final Function(String)? onChanged;
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        color: AppColor.searchbarBackground(context),
         boxShadow: [
           BoxShadow(
             color: Color(0x0A000000),

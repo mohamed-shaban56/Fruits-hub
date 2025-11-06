@@ -32,10 +32,12 @@ class _MainViewState extends State<MainView> {
     
     ],
       child: PersistentTabView(
+        
         context,
         controller: _controller,
         screens: buildScrean(),
         items: navBarsItems(),
+        backgroundColor: Theme.of(context).brightness==Brightness.light?Colors.white:Colors.black,
         navBarStyle: NavBarStyle.style4,
       ),
     );

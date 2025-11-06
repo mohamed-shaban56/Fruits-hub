@@ -58,9 +58,9 @@ class FruitItemListTail extends StatelessWidget {
           userMessege(context: context, errorMessege: S.current.productAddedToCart);
         },
         radius: 24,
-        backGroundcolor: AppColor.primaryColor,
+        backGroundcolor: AppColor.fruitItemActionButtomBackground(context),
         icon: Icons.add,
-        iconColor: Colors.white,
+        iconColor: Theme.of(context).brightness==Brightness.light?Colors.white:Colors.black,
       ),
     );
   }

@@ -19,8 +19,8 @@ final String title,subTitle ,price;
         height: 81.h,
         width: double.infinity,
         decoration: BoxDecoration(
-          border: Border.all(color: isSelected?AppColor.primaryColor:Colors.transparent),
-          color: AppColor.gryColor,
+          border: Border.all(color: isSelected?AppColor.shippingActiveItem(context):Colors.transparent),
+          color: AppColor.shippingItemSectionBackgroun(context),
          borderRadius: BorderRadius.circular(4),
       
         ),
