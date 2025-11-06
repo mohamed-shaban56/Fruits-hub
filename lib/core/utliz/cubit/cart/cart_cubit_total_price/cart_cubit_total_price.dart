@@ -10,6 +10,6 @@ class CartCubitTotalPrice extends Cubit<CartCubitTotalPriceState> {
   void calcltateTotalPrice(num totalPrice)
   {
     log('CartCubitTotalPrice total price is :$totalPrice');
-    emit(tempstate(totalPrice));
+    emit(CalclateTotalPriceState(totalPrice));
   }
 }
