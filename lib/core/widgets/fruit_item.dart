@@ -10,6 +10,7 @@ import 'package:fruitapp/core/widgets/fruit_item_list_tail.dart';
 
 import 'package:fruitapp/features/dashbord/domain/entites/product_entity.dart';
 import 'package:fruitapp/features/home/presentation/views/fruit_item_details_view.dart';
+import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class FruitItem extends StatelessWidget {
   const FruitItem({super.key, required this.product});
@@ -21,8 +22,12 @@ class FruitItem extends StatelessWidget {
     var isA = isArabic(context);
     return GestureDetector(
       onTap: () {
-        
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>FruitItemDetailsView(imageUrl: product.imageUrl,)));
+   PersistentNavBarNavigator.pushNewScreen(
+                       context,
+                       screen: FruitItemDetailsView(product: product),
+                       withNavBar: false,
+                     );
+       
       },
       child: Container(
         decoration: BoxDecoration(
