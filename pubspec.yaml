@@ -24,6 +24,7 @@ dependencies:
   flutter_paypal_payment: ^1.0.8
   flutter_screenutil: ^5.9.0
   flutter_secure_storage: ^9.2.4
+  flutter_stripe: ^12.1.0
   flutter_svg: ^2.2.1
   font_awesome_flutter: ^10.12.0
   get_it: ^8.2.0
