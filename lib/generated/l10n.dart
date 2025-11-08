@@ -149,6 +149,11 @@ class S {
     return Intl.message('Login', name: 'loginButton', desc: '', args: []);
   }
 
+  /// `Pay with`
+  String get pay_with {
+    return Intl.message('Pay with', name: 'pay_with', desc: '', args: []);
+  }
+
   /// `Select Language`
   String get select_language {
     return Intl.message(

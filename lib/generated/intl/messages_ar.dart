@@ -202,6 +202,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordRequired": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور مطلوبة",
     ),
+    "pay_with": MessageLookupByLibrary.simpleMessage("ادفع من خلال"),
     "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
     "payment_method": MessageLookupByLibrary.simpleMessage("وسيلة الدفع"),
     "payment_success": MessageLookupByLibrary.simpleMessage(

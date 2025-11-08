@@ -12,7 +12,7 @@ part 'add_order_state.dart';
 class AddOrderCubit extends Cubit<AddOrderState> {
   AddOrderCubit(this.orderRepo) : super(AddOrderInitial());
   OrderRepo orderRepo;
-  void addOrder(OrderInputEntity orderEntity)async
+  Future<void> addOrder(OrderInputEntity orderEntity)async
   {
     emit(AddOrderLoading());
   var  result=await orderRepo.addOrder(orderEntity);

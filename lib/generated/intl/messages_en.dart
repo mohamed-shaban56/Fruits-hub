@@ -215,6 +215,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordRequired": MessageLookupByLibrary.simpleMessage(
       "Password is required",
     ),
+    "pay_with": MessageLookupByLibrary.simpleMessage("Pay with"),
     "payment": MessageLookupByLibrary.simpleMessage("Payment"),
     "payment_method": MessageLookupByLibrary.simpleMessage("Payment Method"),
     "payment_success": MessageLookupByLibrary.simpleMessage(

@@ -13,6 +13,7 @@
   "password": "Password",
   "forgotPassword": "Forgot Password?",
   "loginButton": "Login",
+    "pay_with":  "Pay with",
   "select_language":"Select Language",
   "english":"English",
   "required_filed":"is required",

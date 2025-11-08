@@ -11,6 +11,7 @@
    "SingUpTitle": "حساب جديد",
   "email": "البريد الإلكتروني",
   "password": "كلمة المرور",
+  "pay_with": "ادفع من خلال",
   "forgotPassword": "نسيت كلمة المرور؟",
   "loginButton": "تسجيل دخول",
   "noAccount": "لا تملك حساب؟",

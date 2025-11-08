@@ -1,3 +1,9 @@
+import 'package:dio/dio.dart';
+import 'package:fruitapp/core/utliz/repo/stripe_repo/stripe_repo_implementation.dart';
+import 'package:fruitapp/core/utliz/repo/stripe_repo/stripe_repo.dart';
+import 'package:fruitapp/core/utliz/services/api_service.dart';
+import 'package:fruitapp/core/utliz/services/stripe_remote_data_source.dart';
+import 'package:fruitapp/core/utliz/services/stripe_service.dart';
 import 'package:fruitapp/features/auth/domain/repo/update_user_data_repo.dart';
 import 'package:fruitapp/features/auth/domain/repo/update_user_data_repo_implement.dart';
 import 'package:fruitapp/features/order_feature/domain/repos/update_order_status_repo.dart';
@@ -35,6 +41,12 @@ void setupGetIt() {
       databaseService: getIt<DatabaseService>(),
     ),
   );
+   getIt.registerLazySingleton<ApiService>(
+    () => ApiService(Dio()),
+  );
+    getIt.registerLazySingleton<StripeService>(
+    () => StripeService(StripeRemoteDataSource(apiService: getIt<ApiService>())),
+  );
 
   getIt.registerLazySingleton<FileImageRepo>(
     () => FileImageRepoImplement(getIt<StorageService>()),
@@ -57,4 +69,8 @@ void setupGetIt() {
   );
    getIt.registerLazySingleton<UpdateOrderStatusRepo>(
     () => UpdateOrderStatusRepoImplement(databaseService: getIt<DatabaseService>()));
+
+      getIt.registerLazySingleton<StripeRepo>(
+    () => StripeRepoImplementation(stripeService:getIt<StripeService>() ),
+  );
 }

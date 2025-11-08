@@ -45,11 +45,7 @@ if(paymentMethods[index].paymentMethod==Constant.kstripe)
      orderEnty.paymentMethod=Constant.kpaypal;
   });
 
-} else if(paymentMethods[index].paymentMethod==Constant.kpaymob)
-{
-  setState(() {
-       orderEnty.paymentMethod=Constant.kpaymob;
-  });
+
 
  
 }

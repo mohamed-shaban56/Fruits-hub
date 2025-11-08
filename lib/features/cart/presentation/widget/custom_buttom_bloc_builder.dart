@@ -36,7 +36,7 @@ final num totalPrice;
                    }
                  },
                  text:
-                     'الدفع$totalPrice جنيه',
+                     'الدفع ${totalPrice.toInt()} جنيه',
                );
   }
 }

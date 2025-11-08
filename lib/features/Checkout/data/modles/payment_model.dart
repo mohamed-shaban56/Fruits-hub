@@ -10,5 +10,4 @@ class PaymentModel {
 List<PaymentModel>paymentMethods=[
   PaymentModel(image: Assets.assetsImagesPaypal, paymentMethod: Constant.kpaypal),
   PaymentModel(image: Assets.assetsImagesStripe, paymentMethod: Constant.kstripe),
-  PaymentModel(image: Assets.assetsImagesPaymob, paymentMethod: Constant.kpaymob)
 ];
