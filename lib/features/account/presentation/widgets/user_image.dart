@@ -2,6 +2,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fruitapp/core/app_image2.dart';
 import 'package:fruitapp/core/utliz/app_image_assets.dart';
 import 'package:fruitapp/core/utliz/services/shared_prefrence_singlton.dart';
 import 'package:image_picker/image_picker.dart';
@@ -38,7 +39,7 @@ class _UserImageState extends State<UserImage> {
 
             CircleAvatar(
               radius: 45,
-              backgroundImage:    getProfileImage!=null?  FileImage(getProfileImage!)     :AssetImage(Assets.accountViewUserImage)as ImageProvider ,
+              backgroundImage:    getProfileImage!=null?  FileImage(getProfileImage!)     :AssetImage(AppImage2.accountViewUserImage)as ImageProvider ,
             ),
 
             Positioned(

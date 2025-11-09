@@ -1,7 +1,10 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:fruitapp/core/utliz/app_color.dart';
+
+
 import 'package:fruitapp/core/utliz/app_style.dart';
 import 'package:fruitapp/features/account/data/account_view_items_model.dart';
 import 'package:fruitapp/features/account/presentation/manager/them_cubit/cubit/them_cubit.dart';
@@ -66,7 +69,9 @@ class _CustomizeListTailWidgetState extends State<CustomizeListTailWidget> {
   Widget build(BuildContext context) {
     return ListTile(
           contentPadding: EdgeInsets.zero,
-          leading: SvgPicture.asset(widget.accountViewItemsModel.image),
+          leading: SizedBox(
+            width: 20,
+            child: Image.asset(widget.accountViewItemsModel.image,color:AppColor.primaryColor,)),
           title: Text(
             widget.accountViewItemsModel.title,
             style: AppStyle.semiBold13().copyWith(color: Color(0xff949D9E)),
@@ -83,9 +88,13 @@ class _CustomizeListTailWidgetState extends State<CustomizeListTailWidget> {
                else if (widget.index == 2) {
                 navigateToFavoriteView(context);
               } 
-                else if (widget.index == 3) {
-                navigateToLanguageView(context);
-              }
+                else if(widget.index==3)
+                {
+                  setState(() {
+                  isEnabaled=!isEnabaled;
+                });
+                context.read<ThemCubit>().toggleThem();
+                }
               
               else if (widget.index == 4) {
                 navigateToLanguageView(context);
@@ -95,17 +104,11 @@ class _CustomizeListTailWidgetState extends State<CustomizeListTailWidget> {
                 navigateToAboutUs(context);
               }
             },
-            icon:widget.index==3?IconButton(
-              padding: EdgeInsets.zero,
-              onPressed: (){
-                setState(() {
-                  isEnabaled=!isEnabaled;
-                });
-
-                context.read<ThemCubit>().toggleThem();
-
-              }, icon: Icon(isEnabaled?FontAwesomeIcons.toggleOn:FontAwesomeIcons.toggleOff)) :Icon(widget.accountViewItemsModel.icon),
+            icon:widget.index==3?  Icon(isEnabaled?Icons.dark_mode:Icons.light_mode) :
+              Icon(widget.accountViewItemsModel.icon),
           ),
         );
   }
+  
+ 
 }

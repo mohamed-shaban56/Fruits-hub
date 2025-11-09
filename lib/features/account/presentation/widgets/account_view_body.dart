@@ -36,7 +36,7 @@ class _AccountViewBodyState extends State<AccountViewBody> {
               AccountViewBodyItem(),
               SizedBox(height: 22.h),
               Text(S.current.help, style: AppStyle.semiBold13()),
-              CustomizeListTailWidget(accountViewItemsModel: accountItemsList.last, index: accountItemsList.length)
+              CustomizeListTailWidget(accountViewItemsModel: accountItemsList.last, index: accountItemsList.length),
             
             ],
           ),

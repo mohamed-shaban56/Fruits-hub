@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fruitapp/core/utliz/app_image_assets.dart';
+import 'package:fruitapp/core/app_image2.dart';
+
+
+
 import 'package:fruitapp/generated/l10n.dart';
 
 
@@ -16,10 +18,10 @@ class AccountViewItemsModel {
 }
 
 List<AccountViewItemsModel>getaccountItemsList({required BuildContext context})=>[
-AccountViewItemsModel(image: Assets.accountViewUserImage, title:S.of(context).account, icon:  Icons.arrow_forward_ios,),
-AccountViewItemsModel(image: Assets.requstImage, title: S.of(context).orders, icon:  Icons.arrow_forward_ios,),
-  AccountViewItemsModel(image: Assets.heartimage, title: S.of(context).favorites, icon:  Icons.arrow_forward_ios),
- AccountViewItemsModel(image: Assets.notificationImage, title: S.of(context).notifications, icon:  FontAwesomeIcons.toggleOff),
- AccountViewItemsModel(image: Assets.languageImage, title: S.of(context).language, icon: Icons.arrow_forward_ios,),
-  AccountViewItemsModel(image: Assets.infoCircleImage, title: S.of(context).about_us, icon: Icons.arrow_forward_ios,)
+AccountViewItemsModel(image: AppImage2.accountViewUserImage, title:S.of(context).account, icon:  Icons.arrow_forward_ios,),
+AccountViewItemsModel(image: AppImage2.requstImage, title: S.of(context).orders, icon:  Icons.arrow_forward_ios,),
+ AccountViewItemsModel(image: AppImage2.heartimage, title: S.of(context).favorites, icon:  Icons.arrow_forward_ios),
+ AccountViewItemsModel(image:AppImage2.assetImagethem, title: S.of(context).Theme, icon:  Icons.light_mode),
+ AccountViewItemsModel(image: AppImage2.languageImage, title: S.of(context).language, icon: Icons.arrow_forward_ios,),
+  AccountViewItemsModel(image: AppImage2.infoCircleImage, title: S.of(context).about_us, icon: Icons.arrow_forward_ios,)
 ];

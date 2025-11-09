@@ -106,12 +106,15 @@ class Assets {
             static const requstShippingImage="assets/images/shipping_location.png";
          static const requstTrackingImage="assets/images/track_requst_image.png";
          static const cameraImage="assets/images/camera_image.png";
-         static const accountViewUserImage="assets/images/user.svg";
-         static const heartimage="assets/images/heart.svg";
-         static const languageImage="assets/images/language_imae.svg";
-         static const infoCircleImage="assets/images/info-circle.svg";
+       
+
+         
+  
          static const existImage="assets/images/exist_image.svg";
-         static const requstImage="assets/images/requst_image.svg";
+        
          static const notificationImage="assets/images/notification.svg";
 }
 
+
+
+  
