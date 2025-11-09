@@ -49,7 +49,7 @@ class FruitItem extends StatelessWidget {
                     imageUrl: product.imageUrl,
                   )),
                   Spacer(),
-                  FruitItemListTail( product: product,),
+                  FruitItemProductInfoAndActionButton( product: product,),
                 ],
               ),
               Positioned(top: -10, right: 0, child: FruitItemFavoriteButtom(product: product,)),
