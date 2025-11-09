@@ -103,4 +103,8 @@ static const lightGray =Color(0xff979899);
   {
    return    Theme.of(context).brightness==Brightness.light?Colors.black.withOpacity(.5) :Colors.white;
   }
+       static Color fruitItemDetailsImageBackground(BuildContext context)
+  {
+   return    Theme.of(context).brightness==Brightness.light?AppColor.gryColor :AppColor.darkBackground;
+  }
 }

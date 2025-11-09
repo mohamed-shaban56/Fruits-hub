@@ -10,9 +10,10 @@
 "product_category_organic": "أورجانيك",
 "product_expiry": "الصلاحية",
 "product_weight": "100 جرام",
+"Month":"شهر",
 "product_review_label": "المراجعة",
 "product_reviews": "المراجعات",
-
+"Calory":"كالوري",
 "product_add_to_cart": "أضف إلى السلة",
 "startNowKeyword":"ابدأ الان",
   "loginTitle": "تسجيل دخول",
