@@ -119,6 +119,51 @@ class S {
     return Intl.message('Login', name: 'loginTitle', desc: '', args: []);
   }
 
+  /// `Reviews`
+  String get product_reviews {
+    return Intl.message('Reviews', name: 'product_reviews', desc: '', args: []);
+  }
+
+  /// `100 g`
+  String get product_weight {
+    return Intl.message('100 g', name: 'product_weight', desc: '', args: []);
+  }
+
+  /// `Add to Cart`
+  String get product_add_to_cart {
+    return Intl.message(
+      'Add to Cart',
+      name: 'product_add_to_cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Organic`
+  String get product_category_organic {
+    return Intl.message(
+      'Organic',
+      name: 'product_category_organic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expiry`
+  String get product_expiry {
+    return Intl.message('Expiry', name: 'product_expiry', desc: '', args: []);
+  }
+
+  /// `Review`
+  String get product_review_label {
+    return Intl.message(
+      'Review',
+      name: 'product_review_label',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `New Account`
   String get SingUpTitle {
     return Intl.message('New Account', name: 'SingUpTitle', desc: '', args: []);
@@ -132,6 +177,11 @@ class S {
   /// `Password`
   String get password {
     return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Theme`
+  String get Theme {
+    return Intl.message('Theme', name: 'Theme', desc: '', args: []);
   }
 
   /// `Forgot Password?`

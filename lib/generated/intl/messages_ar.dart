@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Payment_method": MessageLookupByLibrary.simpleMessage("وسيلة الدفع"),
     "Personal_info": MessageLookupByLibrary.simpleMessage("المعلومات الشخصيه"),
     "SingUpTitle": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+    "Theme": MessageLookupByLibrary.simpleMessage("المظهر"),
     "about_us": MessageLookupByLibrary.simpleMessage("من نحن"),
     "about_us_section1": MessageLookupByLibrary.simpleMessage(
       "من نحنFruitHUB هو تطبيق لتسوق الفواكه الطازجة. نقدم مجموعة واسعة من الفواكه عالية الجودة. نسعى لتوفير تجربة تسوق سهلة وسريعة. نحرص على تقديم عروض مميزة للمستخدمين. خدماتنا مصممة لتلبية احتياجات كل العملاء.",
@@ -215,8 +216,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "تمت إضافة المنتج إلى السلة بنجاح",
     ),
     "productType": MessageLookupByLibrary.simpleMessage("المنتج"),
+    "product_add_to_cart": MessageLookupByLibrary.simpleMessage(
+      "أضف إلى السلة",
+    ),
     "product_category": MessageLookupByLibrary.simpleMessage("فئة المنتج"),
+    "product_category_organic": MessageLookupByLibrary.simpleMessage(
+      "أورجانيك",
+    ),
+    "product_expiry": MessageLookupByLibrary.simpleMessage("الصلاحية"),
     "product_name": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+    "product_review_label": MessageLookupByLibrary.simpleMessage("المراجعة"),
+    "product_reviews": MessageLookupByLibrary.simpleMessage("المراجعات"),
+    "product_weight": MessageLookupByLibrary.simpleMessage("100 جرام"),
     "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "quantity": MessageLookupByLibrary.simpleMessage("الكميه"),

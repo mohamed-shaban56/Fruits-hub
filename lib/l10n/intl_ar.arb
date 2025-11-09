@@ -6,6 +6,14 @@
     "onBordig2SubTitle":"نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
 
 "skipKeyword":"تخط",
+"Theme":"المظهر",
+"product_category_organic": "أورجانيك",
+"product_expiry": "الصلاحية",
+"product_weight": "100 جرام",
+"product_review_label": "المراجعة",
+"product_reviews": "المراجعات",
+
+"product_add_to_cart": "أضف إلى السلة",
 "startNowKeyword":"ابدأ الان",
   "loginTitle": "تسجيل دخول",
    "SingUpTitle": "حساب جديد",
