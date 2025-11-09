@@ -14,7 +14,7 @@ class AppColor {
       static const mintGreen =   Color(0xffEBF9F1);
      static const darkBackground = Color(0xFF191919);
      static const greenColor=Color(0xFF1B5E37);
-
+static const lightGray =Color(0xff979899);
  
     static const Color grayBlue = Color(0xFF949D9E);
   static Color fruitBackGround(BuildContext context)

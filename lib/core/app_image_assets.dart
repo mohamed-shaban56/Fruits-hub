@@ -174,5 +174,10 @@ class Assets {
   /// assets/images/Vector.png
   static const String assetsImagesVector = "assets/images/Vector.png";
   static const String assetsFruitHubImage="assets/images/fruit_hub_image.svg";
+
+  //   static const String assetsImagetheme="assets/images/theme.png";
+  //  static const String assetsImageStar="assets/images/star.png";
+
+
 }
 
