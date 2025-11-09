@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
 import 'package:fruitapp/core/utliz/widgets/custom_search_bar.dart';
 import 'package:fruitapp/features/home/presentation/manager/product_cubit/best_selling_product_cubit.dart';
 import 'package:fruitapp/features/home/presentation/widgets/best_selling_grideview_bloc_builder.dart';
@@ -22,6 +24,7 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Column(
             children: [
+          
               SizedBox(height: 16.h),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.w),
@@ -33,6 +36,7 @@ class HomeViewBody extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 12.h),
+         
               OfferesListview(),
               SizedBox(height: 12.h),
               Padding(
@@ -46,6 +50,7 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
+       
        SliverPadding(
         padding: EdgeInsets.symmetric(horizontal: 16),
        sliver: BestSellingGrideviewBlocBuilder())

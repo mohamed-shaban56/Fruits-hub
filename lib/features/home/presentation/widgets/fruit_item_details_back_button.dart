@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:fruitapp/core/app_image_assets.dart';
+
+
+
 
 class FruitItemDetailsBackButton extends StatelessWidget {
   const FruitItemDetailsBackButton({
@@ -14,12 +16,17 @@ class FruitItemDetailsBackButton extends StatelessWidget {
         
         Navigator.pop(context);
       },
-      child: CircleAvatar(
-            radius: 22,
-            backgroundColor: Colors.white,
-          backgroundImage: AssetImage(Assets.assetImageBackIos),
+      child: Container(
+height: 44,
+width: 44,
+decoration: BoxDecoration(
+  color: Colors.white,
+  borderRadius: BorderRadius.circular(30),
+),
+child: Icon(Icons.arrow_back_ios,color: Colors.black,),
+      )
             
-            ),
+            
     );
   }
 }

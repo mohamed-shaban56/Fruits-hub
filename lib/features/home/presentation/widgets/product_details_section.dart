@@ -41,7 +41,7 @@ class ProductDetailsSection extends StatelessWidget {
           
           ],
         ),
-          FruitItemDetailsDescription(),
+          FruitItemDetailsDescription(desc: product.productDesc,),
            SizedBox(
               height: 16,
             ),
@@ -49,7 +49,7 @@ class ProductDetailsSection extends StatelessWidget {
             SizedBox(
               height: 60,
             ),
-            CustomButton(text: S.current.productAddedToCart)
+            CustomButton(text: S.current.product_add_to_cart)
       ],
     );
   }

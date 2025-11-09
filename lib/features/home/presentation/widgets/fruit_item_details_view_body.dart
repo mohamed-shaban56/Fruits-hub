@@ -16,7 +16,7 @@ class FruitItemDetailsViewBody extends StatelessWidget {
       children: [
         ImageSection(height: height, imageUrl: product.imageUrl, isA: isA),
         Padding(
-          padding:  EdgeInsets.only(left: isA?12:20,right: isA?20:12),
+          padding: EdgeInsets.only(left: isA?12:20,right: isA?20:12),
           child: SingleChildScrollView(child: ProductDetailsSection(product: product, isA: isA)),
         )
         

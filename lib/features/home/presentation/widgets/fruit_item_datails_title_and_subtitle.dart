@@ -23,7 +23,7 @@ class FruitItemDetailsTitleAndSubTitL extends StatelessWidget {
       children: [
         Text(
           product.productName,
-          style: AppStyle.semiBold13(),
+          style: AppStyle.bold16(),
         ),
         Text.rich(
           textDirection: isA ? TextDirection.rtl : TextDirection.ltr,
@@ -31,8 +31,7 @@ class FruitItemDetailsTitleAndSubTitL extends StatelessWidget {
             TextSpan(
                 text: product.productPrice.toString(),
                 style: AppStyle.semiBold13().copyWith(
-                    color: AppColor.lightSeconodColor,
-                    fontWeight: FontWeight.bold)),
+                    color: AppColor.lightSeconodColor)),
             TextSpan(
                 text: ' / ',
                 style: TextStyle(color: AppColor.secondColor)),

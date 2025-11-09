@@ -1,8 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:fruitapp/core/utliz/app_color.dart';
-import 'package:fruitapp/core/widgets/custom_caced_network_image.dart';
+
 import 'package:fruitapp/features/home/presentation/widgets/custom_curve.dart';
+import 'package:fruitapp/features/home/presentation/widgets/fruit_item_details_cached_network_image.dart';
 
 class FruitItemDetailsImage extends StatelessWidget {
   const FruitItemDetailsImage({
@@ -21,12 +22,12 @@ class FruitItemDetailsImage extends StatelessWidget {
       child: Container(
         height: height/2.3,
         width: double.infinity,
-        color: AppColor.gryColor,
+        color: AppColor.fruitItemDetailsImageBackground(context),
        child: Center(
          child: SizedBox(
-          height: 167,
+          height: 170,
           width: 221,
-          child: CustomCachedNetworkImage(imageUrl: imageUrl)),
+          child: FruitItemDetailsCachedNetworkImage(imageUrl: imageUrl)),
        ),
       ),
     );
