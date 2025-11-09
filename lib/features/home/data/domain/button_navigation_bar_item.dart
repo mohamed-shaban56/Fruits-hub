@@ -1,5 +1,7 @@
+
 import 'package:fruitapp/core/app_image_assets.dart';
 import 'package:fruitapp/generated/l10n.dart';
+
 
 class ButtonNavigationBarItemEntity {
   final String activeIcon,inActiveIcon,text;
