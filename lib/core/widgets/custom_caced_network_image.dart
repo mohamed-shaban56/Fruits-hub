@@ -7,7 +7,7 @@ final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      fit: BoxFit.cover,
+    
       imageUrl: imageUrl,errorWidget: (context, url, error) => Icon(Icons.error),placeholder: (context, url) => Center(child: CircularProgressIndicator(),),);
   }
 }
