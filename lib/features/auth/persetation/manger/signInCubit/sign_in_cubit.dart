@@ -13,11 +13,11 @@ emit(SignInLoading());
   var result= await authRepo.signInUserWithEmailAndPassword(email: email, password: password);
   result.fold((failure)=>emit(SignInFaulure(error: failure.error)), (user)=>emit(SignInSuccess(user: user)));
   }
- Future<void> singInwithFaceBook()async{
-emit(SignInLoading());
-  var result= await authRepo.signInWithFacebook();
-  result.fold((failure)=>emit(SignInFaulure(error: failure.error)), (user)=>emit(SignInSuccess(user: user)));
-  }
+//  Future<void> singInwithFaceBook()async{
+// emit(SignInLoading());
+//   var result= await authRepo.signInWithFacebook();
+//   result.fold((failure)=>emit(SignInFaulure(error: failure.error)), (user)=>emit(SignInSuccess(user: user)));
+//   }
  Future<void> singInWithGitHub()async{
 emit(SignInLoading());
   var result= await authRepo.signInWithGitHub();

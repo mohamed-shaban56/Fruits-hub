@@ -84,7 +84,7 @@ class SingInViewBodyFormValidate extends StatelessWidget {
                 SizedBox(height: 16,),
              SocialButton(
               onTap: () {
-                 context.read<SignInCubit>().singInwithFaceBook();
+                //  context.read<SignInCubit>().singInwithFaceBook();
               },
               title: S.of(context).loginWithFacebook,  image: Assets.assetsImagesFaceIcon,),
       

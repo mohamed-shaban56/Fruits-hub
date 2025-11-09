@@ -6,7 +6,7 @@ abstract class AuthService {
       Future<User?> signInUserWithEmailAndPassword({required String email, required String password});
       Future<User?> signInWithGoogle();
        Future<User?> signInWithGitHub();
-       signInWithFacebook();
+      //  signInWithFacebook();
     Future<void> deleteUser();
     Future<void >userSingOut();
     Future<void>updateEmailAndPassword({required UpdateUserDataEntity updateUserData});

@@ -8,7 +8,7 @@ Future<Either<Failure,UserEntity> > createUserWithEmailAndPassword({required Str
 Future<Either<Failure,UserEntity> > signInUserWithEmailAndPassword({required String email,required String password});
 Future<Either<Failure,UserEntity> > signInWithGoogle();
 Future<Either<Failure,UserEntity> > signInWithGitHub();
-Future<Either<Failure,UserEntity> > signInWithFacebook();
+// Future<Either<Failure,UserEntity> > signInWithFacebook();
 Future saveUserData({required UserEntity user,required String uid});
 Future<UserEntity> getUserData({required String uid});
 Future saveUserDataLocal({required UserEntity user});

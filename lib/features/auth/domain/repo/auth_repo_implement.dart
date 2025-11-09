@@ -94,19 +94,19 @@ return right(userEntity);
  }
   }
   
-  @override
-  Future<Either<Failure, UserEntity>> signInWithFacebook()async {
- try{
-var user=await  authService.signInWithFacebook();
-var userEntity=UserModel.fromFirebaseUser(user);
-await saveUserData(user: userEntity, uid: userEntity.uid!);
-await getUserData(uid: user!.uid);
-return right(userEntity);
- }catch (e)
- {
-  return left(ServerFailure(e.toString()));
- }
-  }
+  // @override
+//   Future<Either<Failure, UserEntity>> signInWithFacebook()async {
+//  try{
+// var user=await  authService.signInWithFacebook();
+// var userEntity=UserModel.fromFirebaseUser(user);
+// await saveUserData(user: userEntity, uid: userEntity.uid!);
+// await getUserData(uid: user!.uid);
+// return right(userEntity);
+//  }catch (e)
+//  {
+//   return left(ServerFailure(e.toString()));
+//  }
+//   }
   
   @override
   Future saveUserData({required UserEntity user,required String uid}) async{
