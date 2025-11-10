@@ -41,7 +41,7 @@ final OrderEntity order;
              SizedBox(height: 5.h,),
           PaymentMethod(isA: isA, paymentType: order.paymentMethod,),
           OrderProductDetails(orderProducts: order.orderProduct,),
-
+          SizedBox(height: 20,),
           OrderActionButtom(orderStatus: order.orderStatus??OrderStatusEnum.pending.name, orderId: order.orderId,)
             ],
           ),

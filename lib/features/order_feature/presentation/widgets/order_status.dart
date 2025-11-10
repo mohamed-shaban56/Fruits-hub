@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:fruitapp/features/order_feature/presentation/widgets/function_helper/get_status_color.dart';
+
 
 
 class OrderStatus extends StatelessWidget {
@@ -12,7 +14,7 @@ final String orderStatus;
     return Container(
      
       decoration: BoxDecoration(
-        color: Colors.orange,
+        color: getStatusColor(orderStatus),
         borderRadius: BorderRadius.circular(6)
       ),
       child: Padding(
@@ -22,3 +24,4 @@ final String orderStatus;
     );
   }
 }
+
