@@ -77,10 +77,8 @@ log("User Deleted");
 
   @override
   Stream <List<Map<String, dynamic>>> streamData({required String path}) {
-  final data =  FirebaseFirestore.instance.collection(path);
-   return    data.snapshots().map(
-    (snapshot)=>snapshot.docs.map((e)=>e.data()).toList()).handleError((error)=>log('error in stream function error is :$error'));
-
+  final data =  FirebaseFirestore.instance.collection(path).snapshots();
+   return data.map((snapshot)=>snapshot.docs.map((doc)=>doc.data()).toList()).handleError((error)=>log('error in querysnapshot is $error'));
 
 
   
