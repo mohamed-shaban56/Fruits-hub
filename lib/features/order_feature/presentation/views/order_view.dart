@@ -16,7 +16,7 @@ class OrderView extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(providers: [
 BlocProvider(
-      create: (context) => GetOrderCubit(getIt<GetOrderRepo>())),
+      create: (context) => GetOrderCubit(getIt<GetOrderRepo>())..getOrder()),
       BlocProvider(
       create: (context) => UpdateOrderCubit(updateorderRepo: getIt<UpdateOrderStatusRepo>()),)
     ],

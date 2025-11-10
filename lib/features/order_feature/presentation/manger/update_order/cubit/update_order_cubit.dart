@@ -9,7 +9,7 @@ part 'update_order_state.dart';
 class UpdateOrderCubit extends Cubit<UpdateOrderState> {
   UpdateOrderCubit({required this.updateorderRepo}) : super(UpdateOrderInitial());
   UpdateOrderStatusRepo updateorderRepo;
- void updateOrder({required String orderId,required  Map<String,dynamic>status})async
+  Future<void> updateOrder({required String orderId,required  Map<String,dynamic>status})async
  {
   emit(UpdateOrderLoading());
   var result=await updateorderRepo.updateOrderStatus(orderid: orderId, status: status);
