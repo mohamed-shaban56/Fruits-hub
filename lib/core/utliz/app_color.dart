@@ -107,4 +107,13 @@ static const lightGray =Color(0xff979899);
   {
    return    Theme.of(context).brightness==Brightness.light?AppColor.gryColor :AppColor.darkBackground;
   }
+      static Color paymentActiveItem(BuildContext context)
+  {
+   return    Theme.of(context).brightness==Brightness.light?Colors.black :Colors.white;
+  }
+        static Color paymentSectionColor(BuildContext context)
+  {
+   return    Theme.of(context).brightness==Brightness.light?AppColor.gryColor:AppColor.lightSeconodColor;
+  }
+    
 }
