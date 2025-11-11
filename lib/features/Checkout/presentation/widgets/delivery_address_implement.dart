@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fruitapp/core/app_image_assets.dart';
 import 'package:fruitapp/core/utliz/app_color.dart';
+import 'package:fruitapp/core/utliz/app_image_assets.dart';
 import 'package:fruitapp/features/Checkout/domain/entityes/address_entity.dart';
 // import 'package:fruitapp/features/Checkout/domain/entityes/order_input_entity.dart';
 import 'package:fruitapp/features/Checkout/presentation/widgets/function_helper/build_show_modle_buttom_sheet.dart';
@@ -40,9 +40,9 @@ class DeliveryAddressImplement extends StatelessWidget {
                 onPressed: () {  
                  buildShowModelButtomSheet(context,addresEntity);
       
-                }, icon: Image.asset(
+                }, icon: Icon(Icons.edit,size: 20,)
                  
-                 Assets.assetsImagesVector,),),
+                 ),
                Text(S.current.edit) ,
                 ],
                ),
@@ -54,7 +54,7 @@ class DeliveryAddressImplement extends StatelessWidget {
         SizedBox(height: 8.h,),
       Row(
         children: [
-          Image.asset(Assets.assetsImagesLocation,color: AppColor.reviewItemSectionLocationColor(context),),
+          Image.asset(Assets.location,color: AppColor.reviewItemSectionLocationColor(context),),
           SizedBox(width: 5,),
           
           Text(addresEntity.toString(),)
