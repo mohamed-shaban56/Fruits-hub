@@ -7,7 +7,7 @@ class Constant{
   static const  konBordingKey='onBordingKey';
   static const khiveBoxName="favoriteProduct";
   static const ksupabasebucket='avatar';
-    static const kfavoriteIProudct='favorite';
+    static const kfavoriteIProudct='favoriteProduct';
 static const klongInKey='loginKey';
 static const ksaveUserData='userDataKey';
 static const kproductPice='productPrice';
@@ -24,7 +24,7 @@ static const knumberOfColories='numberOfColories';
 static const kratingCount='ratingCount';
 static const kaverageRating='averageRating';
  static const kunit='unit';
- static const kisOrganic='isOrganic';
+ static const kisOrganic='organicPercentage';
  static const ksubapaseUrl='https://mkwjyzdcjcboheejhrsl.supabase.co';
 
 static const ksubapaseKey='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1rd2p5emRjamNib2hlZWpocnNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA0MzQ4MjAsImV4cCI6MjA3NjAxMDgyMH0.R23dkomLL278VME5_as9YLmXtqgbCjsOswxRNpnaXyc';
