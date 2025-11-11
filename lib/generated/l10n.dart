@@ -119,6 +119,11 @@ class S {
     return Intl.message('Login', name: 'loginTitle', desc: '', args: []);
   }
 
+  /// `Day`
+  String get Days {
+    return Intl.message('Day', name: 'Days', desc: '', args: []);
+  }
+
   /// `Reviews`
   String get product_reviews {
     return Intl.message('Reviews', name: 'product_reviews', desc: '', args: []);
@@ -152,6 +157,11 @@ class S {
   /// `Expiry`
   String get product_expiry {
     return Intl.message('Expiry', name: 'product_expiry', desc: '', args: []);
+  }
+
+  /// `Calory`
+  String get Calory {
+    return Intl.message('Calory', name: 'Calory', desc: '', args: []);
   }
 
   /// `Review`
