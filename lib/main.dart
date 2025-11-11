@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:fruitapp/core/Them/them.dart';
 import 'package:fruitapp/core/utliz/constant.dart';
+import 'package:fruitapp/core/utliz/cubit/cart/cart_cubit/cart_cubit.dart';
 import 'package:fruitapp/core/utliz/cubit/lang_cubit/cubit/language_cubit.dart';
 import 'package:fruitapp/core/utliz/function_hulper/api_keys.dart';
 import 'package:fruitapp/core/utliz/function_hulper/service_locator.dart';
@@ -31,7 +32,8 @@ void main() async {
   await Hive.initFlutter();
   Stripe.publishableKey=ApiKeys.stripePubicKey;
   Hive.registerAdapter(ProductModelAdapter());
-  await Hive.openBox<ProductModel>(Constant.kfavoriteIProudct);
+await Hive.openBox<ProductModel>(Constant.kfavoriteIProudct);
+
   setupGetIt();
   runApp(MultiBlocProvider(
  
@@ -40,6 +42,8 @@ void main() async {
         create: (context) => LanguageCubit(),
        
       ),
+      BlocProvider(
+      create: (context) => CartCubit(),),
          BlocProvider(
         create: (context) => ThemCubit(),
        
@@ -69,6 +73,7 @@ class FruitsHub extends StatelessWidget {
               return BlocBuilder<LanguageCubit, Locale>(
                       builder: (context, local) {
                         return MaterialApp(
+                          
                           theme: AppThem.light,
                           darkTheme: AppThem.dart,
                           themeMode: themMode,
