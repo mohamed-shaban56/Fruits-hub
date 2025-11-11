@@ -1,5 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruitapp/core/utliz/cubit/cart/cart_cubit/cart_cubit.dart';
+import 'package:fruitapp/core/utliz/function_hulper/user_massage.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:fruitapp/core/utliz/cubit/cart/cart_cubit/cart_cubit.dart';
+// import 'package:fruitapp/core/utliz/function_hulper/user_massage.dart';
 import 'package:fruitapp/core/utliz/widgets/custom_button.dart';
 import 'package:fruitapp/features/dashbord/domain/entites/product_entity.dart';
 import 'package:fruitapp/features/home/presentation/widgets/fruit_item_datails_title_and_subtitle.dart';
@@ -32,7 +38,7 @@ class ProductDetailsSection extends StatelessWidget {
                   product: product, isA: isA),
             ),
             Spacer(),
-            FruitItemDetailsActionButton(),
+            FruitItemDetailsActionButton(product: product,),
           
             SizedBox(
               height: 16,
@@ -45,11 +51,16 @@ class ProductDetailsSection extends StatelessWidget {
            SizedBox(
               height: 16,
             ),
-          FruitItemDetailsAllProductDetailsInfo(),
+          FruitItemDetailsAllProductDetailsInfo(product: product,),
             SizedBox(
               height: 60,
             ),
-            CustomButton(text: S.current.product_add_to_cart)
+            CustomButton(
+              onPressed: () {
+                 context.read<CartCubit>().addProduct(product);
+                 userMessege(context: context, errorMessege: S.current.productAddedToCart);
+              },
+              text: S.current.product_add_to_cart)
       ],
     );
   }

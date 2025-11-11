@@ -20,11 +20,25 @@ final String image,title,info;
         border: Border.all(color: AppColor.gryColor,width: 2),
         borderRadius: BorderRadius.circular(16),
       ),
-child:ListTile(
-  title: Text(info,style: AppStyle.bold16().copyWith(color: AppColor.linkColor),),
-  subtitle: Text(title,style: AppStyle.semiBold11().copyWith(color: AppColor.lightGray),),
-  trailing: Image.asset(image),
+child:Padding(
+  padding: const EdgeInsets.only(top: 12,bottom: 12),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+   Text(info,style: AppStyle.bold16().copyWith(color: AppColor.linkColor),),
+   SizedBox(height: 8,),
+    Text(title,style: AppStyle.semiBold11().copyWith(color: AppColor.lightGray),),
+        ],
+      ),
+      SizedBox(width: 16,),
+       Image.asset(image),
+    ],
+  ),
 )
+
     );
   }
 }
