@@ -23,7 +23,7 @@ class ProductModelAdapter extends TypeAdapter<ProductModel> {
       imageUrl: fields[5] as String,
       experationMonths: fields[6] as int,
       numOfcolories: fields[7] as int,
-      isOrganic: fields[8] as bool,
+      organicPercentage: fields[8] as int,
       averageRating: fields[9] as num,
       averageCount: fields[10] as num,
       unit: fields[11] as int,
@@ -51,7 +51,7 @@ class ProductModelAdapter extends TypeAdapter<ProductModel> {
       ..writeByte(7)
       ..write(obj.numOfcolories)
       ..writeByte(8)
-      ..write(obj.isOrganic)
+      ..write(obj.organicPercentage)
       ..writeByte(9)
       ..write(obj.averageRating)
       ..writeByte(10)

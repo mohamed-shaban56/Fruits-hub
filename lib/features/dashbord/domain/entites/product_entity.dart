@@ -12,11 +12,11 @@ final String productDesc;
 final String imageUrl;
 final int experationMonths;
 final int numOfcolories;
-final bool isOrganic;
+final int organicPercentage;
 final num averageRating;
 final num averageCount;
 final int unit;
- const ProductEntity({required  this.experationMonths,required this.numOfcolories,required this.isOrganic,required this.averageRating,required this.averageCount,required this.unit,required this.productPrice, required this.productName, required this.productCode, required this.productDesc, required this.imageUrl,});
+ const ProductEntity({required  this.experationMonths,required this.numOfcolories,required this.organicPercentage,required this.averageRating,required this.averageCount,required this.unit,required this.productPrice, required this.productName, required this.productCode, required this.productDesc, required this.imageUrl,});
   
   @override
 

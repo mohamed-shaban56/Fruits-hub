@@ -24,20 +24,20 @@ final int experationMonths;
 @HiveField(7)
 final int numOfcolories;
 @HiveField(8)
-final bool isOrganic;
+final int organicPercentage;
 @HiveField(9)
 final num averageRating;
 @HiveField(10)
 final num averageCount;
 @HiveField(11)
 final int unit;
-ProductModel({required  this.experationMonths,required this.numOfcolories,required this.isOrganic,required this.averageRating,required this.averageCount,required this.unit,required this.productPrice, required this.productName, required this.productCode, required this.productDesc,required this.imageUrl,this.sellingCount=0  });
+ProductModel({required  this.experationMonths,required this.numOfcolories,required this.organicPercentage,required this.averageRating,required this.averageCount,required this.unit,required this.productPrice, required this.productName, required this.productCode, required this.productDesc,required this.imageUrl,this.sellingCount=0  });
 
   ProductEntity toEntity() {
     return ProductEntity(
       experationMonths: experationMonths,
       numOfcolories: numOfcolories,
-      isOrganic: isOrganic,
+      organicPercentage: organicPercentage,
       averageRating: averageRating,
       averageCount: averageCount,
       unit: unit,
@@ -55,7 +55,7 @@ factory ProductModel.fromjson(Map<String,dynamic>json)
   return ProductModel(
     experationMonths: json[Constant.kexperationManth], 
   numOfcolories: json[Constant.knumberOfColories], 
-  isOrganic: json[Constant.kisOrganic],
+  organicPercentage: json[Constant.kisOrganic],
    averageRating: json[Constant.kaverageRating], 
    averageCount: json[Constant.kratingCount],
     unit: json[Constant.kunit], 
@@ -77,7 +77,7 @@ factory ProductModel.fromEntity(ProductEntity productEntity)
      
        experationMonths: productEntity.experationMonths,
        numOfcolories: productEntity.numOfcolories,
-        isOrganic: productEntity.isOrganic,
+        organicPercentage: productEntity.organicPercentage,
          averageRating: productEntity.averageRating, 
          averageCount: productEntity.averageCount,
           unit: productEntity.unit,

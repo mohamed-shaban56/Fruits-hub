@@ -8,7 +8,7 @@ final dummyroduct = ProductEntity(
   productDesc: 'Loading description...',
   experationMonths: 0,
   numOfcolories: 0,
-  isOrganic: false,
+  organicPercentage: 100,
   averageRating: 0,
   averageCount: 0,
   unit: 0,

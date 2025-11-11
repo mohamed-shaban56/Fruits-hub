@@ -26,14 +26,14 @@ final int experationMonths;
 
 final int numOfcolories;
 
-final bool isOrganic;
+final int organicPercentage;
 
 final num averageRating;
 
 final num averageCount;
 
 final int unit;
-ProductInputModel({required  this.experationMonths,required this.numOfcolories,required this.isOrganic,required this.averageRating,required this.averageCount,required this.unit,required this.productPrice, required this.productName, required this.productCode, required this.productDesc, this.imageUrl,this.sellingCount=0  ,this.fileImage});
+ProductInputModel({required  this.experationMonths,required this.numOfcolories,required this.organicPercentage,required this.averageRating,required this.averageCount,required this.unit,required this.productPrice, required this.productName, required this.productCode, required this.productDesc, this.imageUrl,this.sellingCount=0  ,this.fileImage});
 
 
 
@@ -47,7 +47,7 @@ factory ProductInputModel.fromEntity(ProductInputEntity addProductEntity)
      imageUrl: addProductEntity.imageUrl,
       fileImage: addProductEntity.fileImage, experationMonths: addProductEntity.experationMonths,
        numOfcolories: addProductEntity.numOfcolories,
-        isOrganic: addProductEntity.isOrganic,
+        organicPercentage: addProductEntity.organicPercentage,
          averageRating: addProductEntity.averageRating, 
          averageCount: addProductEntity.averageCount,
           unit: addProductEntity.unit,
@@ -59,7 +59,7 @@ factory ProductInputModel.fromEntity(ProductInputEntity addProductEntity)
     return ProductInputEntity(
       experationMonths: experationMonths,
       numOfcolories: numOfcolories,
-      isOrganic: isOrganic,
+      organicPercentage:organicPercentage,
       averageRating: averageRating,
       averageCount: averageCount,
       unit: unit,
@@ -82,7 +82,7 @@ Map<String, dynamic> toMap() =>{
   Constant.kproductName:productName,
   Constant.kproductDesc:productDesc,
   Constant.kproductCode:productCode,
-  Constant.kisOrganic:isOrganic,
+  Constant.kisOrganic:organicPercentage,
   Constant.kexperationManth:experationMonths,
 Constant.kaverageRating:averageRating,
 Constant.kratingCount:averageCount,
