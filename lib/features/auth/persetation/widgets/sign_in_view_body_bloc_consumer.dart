@@ -7,6 +7,8 @@ import 'package:fruitapp/core/utliz/services/shared_prefrence_singlton.dart';
 import 'package:fruitapp/features/auth/persetation/manger/signInCubit/sign_in_cubit.dart';
 import 'package:fruitapp/features/auth/persetation/widgets/sing_in_view_body.dart';
 import 'package:fruitapp/features/home/presentation/views/main_view.dart';
+import 'package:loader_overlay/loader_overlay.dart';
+import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class SignInViewBodyBlocConsumer extends StatelessWidget {
   const SignInViewBodyBlocConsumer({
@@ -15,20 +17,37 @@ class SignInViewBodyBlocConsumer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<SignInCubit, SignInState>(
-      listener: (context, state) {
-      if(state is SignInFaulure)
-      {
-        userMessege(context: context,errorMessege: state.error);
-      }else if(state is SignInSuccess)
-      {
-        SharedPrefrenceSinglton.seLoggedIn(true);
-         Navigator.push(context, MaterialPageRoute(builder: (context)=>MainView()));
-      }
-      },
-      builder: (context, state) {
-        return  SingInViewBody();
-      },
+    return LoaderOverlay(
+      child: BlocConsumer<SignInCubit, SignInState>(
+        listener: (context, state) {
+        if(state is SignInFaulure)
+        {
+          userMessege(context: context,errorMessege: state.error);
+        }else if(state is SignInSuccess)
+        {
+          SharedPrefrenceSinglton.seLoggedIn(true);
+          //  Navigator.pushAndRemoveUntil(context, 
+          //   MaterialPageRoute(builder: (context)=>MainView()),  (route) => false);
+
+            PersistentNavBarNavigator.pushNewScreen(
+                       context,
+                       screen: MainView(),
+                    
+                     );
+        }
+        },
+        builder: (context, state) {
+          if(state is SignInLoading)
+          {
+            context.loaderOverlay.show();
+          }
+          else
+          {
+            context.loaderOverlay.hide();
+          }
+          return  SingInViewBody();
+        },
+      ),
     );
   }
 }
