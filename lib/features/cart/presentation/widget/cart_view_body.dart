@@ -45,7 +45,9 @@ class _CartViewBodyState extends State<CartViewBody> {
           bottom: 67.h,
           left: 16,
           right: 16,
-          child: CartCustomButton(cartEntity: cartEntity,),
+          child: Visibility(
+            visible: cartEntity.cartItems.isEmpty?false:true,
+            child: CartCustomButton(cartEntity: cartEntity,)),
         ),
       ],
     );
