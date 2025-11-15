@@ -40,7 +40,7 @@ class AboutUsViewBody extends StatelessWidget {
                   SizedBox(height: 5.h,),
                    Text(S.current.about_us_section7,style: AppStyle.regular13() ),
                   SizedBox(height: 5.h,),
-                   Text(S.current.about_us_section8,style: AppStyle.regular13() ),
+                   Text(S.current.about_us_section9,style: AppStyle.regular13() ),
                   SizedBox(height: 5.h,),
                  
                  
