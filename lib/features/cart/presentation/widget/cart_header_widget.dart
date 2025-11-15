@@ -24,10 +24,11 @@ class CartHeaderWidget extends StatelessWidget {
         TextSpan(children: [
         TextSpan(
           text:  S.current.shopping_cart_summary,style: AppStyle.regular13().copyWith(color:AppColor.cartHeaderTextColor(context))),
+          WidgetSpan(child: SizedBox(width: 2.w,)),
         TextSpan(
           text: lenght.toString()
         ),
-        
+          WidgetSpan(child: SizedBox(width: 2.w,)),
         TextSpan(
           text:  S.current.shoppping_cart_summary2,style: AppStyle.regular13().copyWith(color: AppColor.cartHeaderTextColor(context)),
         )
