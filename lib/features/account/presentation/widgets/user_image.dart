@@ -27,7 +27,7 @@ class _UserImageState extends State<UserImage> {
 
     super.initState();
    
-         getProfileImage=SharedPrefrenceSinglton.getImage();
+       
  
 
   }
@@ -37,9 +37,14 @@ class _UserImageState extends State<UserImage> {
           clipBehavior: Clip.none,
           children: [
 
-            CircleAvatar(
-              radius: 45,
-              backgroundImage:    getProfileImage!=null?  FileImage(getProfileImage!)     :AssetImage(AppImage2.accountViewUserImage)as ImageProvider ,
+            ValueListenableBuilder(
+              valueListenable: SharedPrefrenceSinglton.valueNotifierImage,
+              builder: (context, value, child) {
+                return CircleAvatar(
+                  radius: 45,
+                  backgroundImage:    value!=null?  FileImage(value)     :AssetImage(AppImage2.accountViewUserImage)as ImageProvider ,
+                );
+              }
             ),
 
             Positioned(
@@ -57,9 +62,7 @@ class _UserImageState extends State<UserImage> {
                  
                 }else{
                   imageFile=null;
-                }
-                   
-                    });
+                } });
                     if(image!=null)
                     {
       await SharedPrefrenceSinglton.setImage(imageFile!.path);
