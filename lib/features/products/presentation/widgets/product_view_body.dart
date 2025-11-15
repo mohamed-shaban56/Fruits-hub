@@ -25,8 +25,18 @@ class ProductViewBody extends StatelessWidget {
                   },
                 ),
                 SizedBox(height: 16.h),
-                ProductFiterWidget(
-                  productLengt: 5,
+                BlocBuilder<ProductCubit, ProductState>(
+
+                  builder: (context, state) {
+                    if(state is ProductSuccess)
+                    {
+  return ProductFiterWidget(
+                                  productLengt:state.allProducts.length ,
+                                );
+                    }
+                    return SizedBox.shrink();
+                  
+                  },
                 ),
                 SizedBox(height: 16.h),
               ],
