@@ -26,13 +26,16 @@ final Function(String)? onChanged;
         ]
       ),
       child: TextField(
+        maxLines: 1,
         decoration: InputDecoration(
+        
           hintText: S.current.search_placeholder,
           prefixIcon: SizedImage( image: Assets.assetsImagesSearchNormal,),
           suffixIcon: SizedImage( image: Assets.assetsImagesFilterimage),
           enabledBorder: buildOutLineInputBorder(),
           focusedBorder:  buildOutLineInputBorder(),
           border:  buildOutLineInputBorder(),
+          
         ),
         onChanged:onChanged ,
       ),
