@@ -29,12 +29,12 @@ PersistentBottomNavBarItem(
         activeColorPrimary: Colors.green,
         inactiveColorPrimary: Colors.grey,
       ),
-      PersistentBottomNavBarItem(
-        icon:  Icon(Icons.dashboard),
-        title: (S.current.dashboard),
-        activeColorPrimary: Colors.green,
-        inactiveColorPrimary: Colors.grey,
-      ),
+      // PersistentBottomNavBarItem(
+      //   icon:  Icon(Icons.dashboard),
+      //   title: (S.current.dashboard),
+      //   activeColorPrimary: Colors.green,
+      //   inactiveColorPrimary: Colors.grey,
+      // ),
       PersistentBottomNavBarItem(
         icon: SizedBoxImage(image: Assets.assetsImagesOutlineUserImage,),
         title: (S.current.profile),
