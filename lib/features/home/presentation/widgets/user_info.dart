@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/material.dart';
 
 import 'package:fruitapp/core/utliz/app_image_assets.dart';
@@ -19,31 +20,46 @@ class UserInfo extends StatefulWidget {
 
 class _UserInfoState extends State<UserInfo> {
 late  UserEntity user;
+  
   @override
   void initState() {
     
     super.initState();
        user=  SharedPrefrenceSinglton.getUserData();
+      
+      
   }
   @override
   Widget build(BuildContext context) {
         bool isA=isArabic(context);
     return  Directionality(
       textDirection:isA?TextDirection.rtl:TextDirection.ltr ,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+      child: ValueListenableBuilder(
+        valueListenable: SharedPrefrenceSinglton.valueNotifierImage,
+        builder: (BuildContext context, value,_) {
+      return    Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CircleAvatar(
+              radius: 20,
+                backgroundImage: value != null
+      ? FileImage(value)
+      : AssetImage(Assets.defaultUserImage) as ImageProvider,
+            ),
           
-          Image.asset(Assets.assetsImagesUserImage),
-          SizedBox(width: 10,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(S.current.good_morning,style: AppStyle.regular16(),),
-              Text(user.name,style: AppStyle.regular16().copyWith(color: Theme.of(context).brightness==Brightness.light?Colors.black:Colors.white),),
-            ],
-          )
-        ],
+          
+            SizedBox(width: 10,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(S.current.good_morning,style: AppStyle.regular16(),),
+                Text(user.name,style: AppStyle.regular16().copyWith(color: Theme.of(context).brightness==Brightness.light?Colors.black:Colors.white),),
+              ],
+            )
+          ],
+        );
+
+          },
       ),
     );
   }
