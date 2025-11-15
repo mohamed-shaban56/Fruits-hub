@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:fruitapp/core/utliz/constant.dart';
 import 'package:fruitapp/features/auth/domain/entity/user_entity.dart';
 
@@ -8,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPrefrenceSinglton {
   static late SharedPreferences instance;
-
+static ValueNotifier<File?>valueNotifierImage=ValueNotifier(null);
   static Future<void> intial() async {
     instance = await SharedPreferences.getInstance();
   }
@@ -16,16 +17,25 @@ class SharedPrefrenceSinglton {
   static Future<void> seLoggedIn(bool value) async {
     await instance.setBool(Constant.klongInKey, value);
   }
+
+
+
    static Future<void> setImage(String image) async {
+   final imageFile=File(image);
     await instance.setString(Constant.kprofileImage, image);
+    valueNotifierImage.value=imageFile;
   }
- static File? getImage()  {
+
+ static void getImage()  {
   String? path=   instance.getString(Constant.kprofileImage);
   if(path !=null)
   {
-    return File(path);
+   valueNotifierImage.value=File(path);
+  }else
+  {
+  valueNotifierImage.value=null;
   }
-  return null;
+
 
   }
 
