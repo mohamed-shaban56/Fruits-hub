@@ -26,8 +26,7 @@ class SignInViewBodyBlocConsumer extends StatelessWidget {
         }else if(state is SignInSuccess)
         {
           SharedPrefrenceSinglton.seLoggedIn(true);
-          //  Navigator.pushAndRemoveUntil(context, 
-          //   MaterialPageRoute(builder: (context)=>MainView()),  (route) => false);
+         
 
             PersistentNavBarNavigator.pushNewScreen(
                        context,

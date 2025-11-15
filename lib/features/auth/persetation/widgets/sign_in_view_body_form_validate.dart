@@ -39,7 +39,7 @@ class SingInViewBodyFormValidate extends StatelessWidget {
         SizedBox(height: 24,),
        CustomTextFild(
         controller:emailController ,
-        hintText: S.of(context).email, icon: Icons.email,textInputType: TextInputType.emailAddress,) ,
+        hintText: S.of(context).email, icon: Icons.email,textInputType: TextInputType.emailAddress) ,
       
        SizedBox(height: 16,),
       
