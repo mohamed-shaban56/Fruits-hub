@@ -15,8 +15,10 @@ class FruitItemDetailsView extends StatelessWidget {
     return Provider.value(
       value: context.read<CartCubit>(),
       child: Scaffold(
-        body: FruitItemDetailsViewBody(
-          product: product,
+        body: SingleChildScrollView(
+          child: FruitItemDetailsViewBody(
+            product: product,
+          ),
         ),
       ),
     );
