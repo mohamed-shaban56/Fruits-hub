@@ -161,13 +161,6 @@ await users.doc(uid).delete();
   Future<void> userSingOut() async{
 
 await FirebaseAuth.instance.signOut();
- log("user singn out ");
-  await GoogleSignIn.instance.signOut();
-  log("user singn out from google ");
-  
-  
-  
- log("user singn out from facebook ");
 
 
  

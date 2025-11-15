@@ -21,9 +21,6 @@ class GetOrderRepoImplement extends GetOrderRepo {
  return orderResult.map<List<OrderEntity>>(
   (result) => 
     result.map<OrderEntity>((e)=>OrderModel.fromjson(e).toEntity()).toList()
-  
-
-
 
 ).handleError((error)=>throw Exception(error));
 
