@@ -115,5 +115,14 @@ static const lightGray =Color(0xff979899);
   {
    return    Theme.of(context).brightness==Brightness.light?AppColor.gryColor:AppColor.lightSeconodColor;
   }
+     static Color offerItemTextColor(BuildContext context)
+  {
+   return    Theme.of(context).brightness==Brightness.light?Colors.white :Colors.black;
+  }
+     static Color offerItemShopingTtext(BuildContext context)
+  {
+   return    Theme.of(context).brightness==Brightness.light?Colors.black :AppColor.primaryColor;
+  }
+    
     
 }

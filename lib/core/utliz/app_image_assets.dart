@@ -113,6 +113,7 @@ class Assets {
          static const existImage="assets/images/exist_image.svg";
         
          static const notificationImage="assets/images/notification.svg";
+           static const defaultUserImage="assets/images/default_user_image.jpg";
 }
 
 
