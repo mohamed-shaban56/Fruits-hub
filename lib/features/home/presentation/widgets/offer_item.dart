@@ -38,7 +38,7 @@ class OfferItem extends StatelessWidget {
             bottom: 0,
             right: isA?342.w/2:0,
             child: SvgPicture.asset(Assets.assetsImagesPineappleCuate)),
-      OffersDetails(isA: isA),
+           OffersDetails(isA: isA),
         ],
       ),
         ),
