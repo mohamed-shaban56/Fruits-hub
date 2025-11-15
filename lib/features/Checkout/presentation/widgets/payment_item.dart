@@ -16,8 +16,8 @@ final bool isSelected;
       width: 80.w,
       height: 50.h,
       decoration: BoxDecoration(
-      
-        border: Border.all(color:isSelected? Colors.black:AppColor.gryColor),
+      color: AppColor.paymentSectionColor(context),
+        border: Border.all(color:isSelected? AppColor.paymentActiveItem(context):Colors.transparent),
         borderRadius: BorderRadius.circular(4)
         ,image: DecorationImage(
           

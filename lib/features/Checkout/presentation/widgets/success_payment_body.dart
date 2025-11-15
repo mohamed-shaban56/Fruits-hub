@@ -4,9 +4,10 @@ import 'package:fruitapp/core/utliz/app_color.dart';
 import 'package:fruitapp/core/utliz/app_image_assets.dart';
 import 'package:fruitapp/core/utliz/app_style.dart';
 import 'package:fruitapp/core/utliz/widgets/custom_button.dart';
-import 'package:fruitapp/features/home/presentation/widgets/home_view.dart';
+import 'package:fruitapp/features/home/presentation/views/main_view.dart';
 import 'package:fruitapp/features/order_feature/presentation/views/track_order_view.dart';
 import 'package:fruitapp/generated/l10n.dart';
+import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class SuccessPaymentBody extends StatelessWidget {
   const SuccessPaymentBody({super.key});
@@ -31,7 +32,14 @@ class SuccessPaymentBody extends StatelessWidget {
             },
             text: S.current.track_order),
           TextButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeView()));
+            
+
+            PersistentNavBarNavigator.pushNewScreen(
+                       context,
+                       screen:MainView(),
+                     withNavBar: true,
+                     
+                     );
           }, child: Text(S.current.home,style: AppStyle.bold16().copyWith(color: AppColor.primaryColor),)),
                SizedBox(height: 120.h,)
         ],
